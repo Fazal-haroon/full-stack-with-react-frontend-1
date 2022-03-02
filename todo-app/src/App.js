@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import FirstComponent from './components/learning-examples/FirstComponent'
+import SecondComponent from './components/learning-examples/SecondComponent'
+import ThirdComponent from './components/learning-examples/ThirdComponent'
 import './App.css'
 
 //Class Component
@@ -13,30 +16,6 @@ class App extends Component {
       </div>
     )
   }
-}
-
-class FirstComponent extends Component {
-  render() {
-    return (
-      <div>App</div>
-    )
-  }
-}
-
-class SecondComponent extends Component {
-  render() {
-    return (
-      <div>App 2</div>
-    )
-  }
-}
-
-function ThirdComponent() {
-  return ( 
-    <>
-    App 3
-    </>
-  );
 }
 
 export default App;
