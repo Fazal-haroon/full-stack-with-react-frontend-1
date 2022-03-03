@@ -7,3 +7,12 @@ export default class FirstComponent extends Component {
     )
   }
 }
+
+export class FirstComponentPart extends Component {
+  render() {
+    return (
+      <div>FirstComponentPart</div>
+    )
+  }
+}
+
