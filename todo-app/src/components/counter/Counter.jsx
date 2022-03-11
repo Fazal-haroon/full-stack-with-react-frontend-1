@@ -11,6 +11,7 @@ export default class counter extends Component {
     this.increment = this.increment.bind(this);
   }
 
+  
   render() {
     return (
       <div className="counter">
