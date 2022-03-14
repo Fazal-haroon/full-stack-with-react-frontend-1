@@ -16,7 +16,7 @@ export default class counter extends Component {
     return (
       // making counter application in react js
       <div className="counter">
-        <button style={{padding : "15px 30px"}} onClick={this.increment}>+1 </button>
+        <button style={{padding : "15px 30px"}} onClick={this.increment}>+{this.props.by}</button>
         <span style={{fontSize : "50px"}} className="count">{this.state.counter}</span> 
         {/* //css style will convert from style="font-size: 100px" to style={{fontSize:"100px"}} */}
       </div>
@@ -27,7 +27,7 @@ export default class counter extends Component {
     //console.log('increment')
     //this.state.counter++; //bad practice
     this.setState({ 
-        counter: this.state.counter + 1
+        counter: this.state.counter + this.props.by
     });
   }
 }
