@@ -6,30 +6,28 @@ export default class counter extends Component {
   constructor() {
     super(); //this is error 1
     this.state = {
-      counter: 0,
-      secondCounter: 100
+      counter: 0
     };
-    //this.increment = this.increment.bind(this);
+    this.increment = this.increment.bind(this);
 
   }
 
-  render = () => { //using lambda in react we don't need bind the method to the class
+  render() { 
     return (
       // making counter application in react js
       <div className="counter">
-        <button onClick={this.increment}>+1 </button>
-        <span className="count">{this.state.counter}</span>
-        <span className="count">{this.state.secondCounter}</span>
+        <button style={{padding : "15px 30px"}} onClick={this.increment}>+1 </button>
+        <span style={{fontSize : "50px"}} className="count">{this.state.counter}</span> 
+        {/* //css style will convert from style="font-size: 100px" to style={{fontSize:"100px"}} */}
       </div>
     ); 
   }
-  increment = () => {//we need to bind the method to the class
+  increment() {//we need to bind the method to the class
     //Update state - counter++
     //console.log('increment')
     //this.state.counter++; //bad practice
     this.setState({ 
-        counter: this.state.counter + 1 ,
-        secondCounter: this.state.secondCounter + 1 
+        counter: this.state.counter + 1
     });
   }
 }
